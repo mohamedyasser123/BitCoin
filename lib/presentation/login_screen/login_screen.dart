@@ -2,7 +2,11 @@ import 'package:bitcoin/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:bitcoin/core/app_export.dart';
 
+import '../create_password_one_screen/create_password_one_screen.dart';
+import '../create_password_screen/create_password_screen.dart';
+import '../home_new_profile_up_tab_container_screen/home_new_profile_up_tab_container_screen.dart';
 import '../import_wallet_page/import_wallet_tab_container_screen.dart';
+import '../secure_your_wallet_one_screen/secure_your_wallet_one_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -33,11 +37,7 @@ class LoginScreen extends StatelessWidget {
                           height: 600.v,
                           width: double.maxFinite,
                           child: Stack(alignment: Alignment.center, children: [
-                            CustomImageView(
-                                imagePath: ImageConstant.imgBackgroundLight,
-                                height: 461.v,
-                                width: 428.h,
-                                alignment: Alignment.bottomCenter),
+
                             Align(
                                 alignment: Alignment.center,
                                 child: Padding(
@@ -60,13 +60,6 @@ class LoginScreen extends StatelessWidget {
                                               width: 336.h,
                                               margin: EdgeInsets.symmetric(
                                                   horizontal: 21.h),
-                                              child: GestureDetector(
-                                                onTap: (){
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(builder: (context) => ImportWalletTabContainerScreen()),
-                                                  );
-                                                },
                                                 child: Text(
                                                     "Import an exiting wallet or create a new one.",
                                                     maxLines: 2,
@@ -76,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                                                     style: CustomTextStyles
                                                         .titleLargeChiqProGray600
                                                         .copyWith(height: 1.50)),
-                                              )),
+                                              ),
                                           SizedBox(height: 96.v),
                                           CustomElevatedButton(
                                               text: "Create a New Wallet",
@@ -95,8 +88,12 @@ class LoginScreen extends StatelessWidget {
                                               buttonTextStyle:
                                                   theme.textTheme.titleMedium!,
                                               onPressed: () {
-                                                onTapImportUsingSecretRecovery(
-                                                    context);
+                                                Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(builder: (context) => SecureYourWalletOneScreen()),
+                                                );
+                                                //onTapImportUsingSecretRecovery(
+                                                  //  context);
                                               }),
                                           SizedBox(height: 80.v),
                                           Text(

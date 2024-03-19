@@ -33,7 +33,7 @@ class ImportWalletPageState extends State<ImportWalletPage>
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width:700,
+         // width:900,
           child: SingleChildScrollView(
             padding: EdgeInsets.only(
               bottom: MediaQuery.of(context).viewInsets.bottom,

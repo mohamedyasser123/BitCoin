@@ -22,7 +22,7 @@ class SecretRecoveryPhraseScreen extends StatelessWidget {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         body: SizedBox(
-          width: double.maxFinite,
+          width: double.infinity,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -34,13 +34,7 @@ class SecretRecoveryPhraseScreen extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    CustomImageView(
-                      imagePath: ImageConstant.imgBackgroundLight,
-                      height: 461.v,
-                      width: 428.h,
-                      alignment: Alignment.bottomCenter,
-                      margin: EdgeInsets.only(bottom: 38.v),
-                    ),
+
                     Align(
                       alignment: Alignment.center,
                       child: Padding(
@@ -69,9 +63,9 @@ class SecretRecoveryPhraseScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 25.v),
                             _buildFrame1(context),
-                            SizedBox(height: 44.v),
+                            SizedBox(height: 30.v),
                             _buildSuccess(context),
-                            SizedBox(height: 45.v),
+                            SizedBox(height: 30.v),
                             _buildContinue(context),
                           ],
                         ),
@@ -488,12 +482,15 @@ class SecretRecoveryPhraseScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildSuccess(BuildContext context) {
-    return CustomCheckboxButton(
-      text: "Success",
-      value: success,
-      onChange: (value) {
-        success = value;
-      },
+    return Container(
+      margin: EdgeInsets.only(left: 130),
+      child: CustomCheckboxButton(
+        text: "Success",
+        value: success,
+        onChange: (value) {
+          success = value;
+        },
+      ),
     );
   }
 

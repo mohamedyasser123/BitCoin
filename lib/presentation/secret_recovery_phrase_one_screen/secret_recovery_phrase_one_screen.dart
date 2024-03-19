@@ -123,7 +123,7 @@ class SecretRecoveryPhraseOneScreen extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: Padding(
-        padding: EdgeInsets.only(left: 44.h),
+        padding: EdgeInsets.only(left: 44.h,right: 44.h),
         child: GridView.builder(
           shrinkWrap: true,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

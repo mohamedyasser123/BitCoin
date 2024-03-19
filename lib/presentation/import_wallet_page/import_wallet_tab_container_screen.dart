@@ -35,11 +35,7 @@ class ImportWalletTabContainerScreenState
                 height: 822.v,
                 width: double.maxFinite,
                 child: Stack(alignment: Alignment.center, children: [
-                  CustomImageView(
-                      imagePath: ImageConstant.imgBackgroundLight,
-                      height: 461.v,
-                      width: 428.h,
-                      alignment: Alignment.center),
+
                   Align(
                       alignment: Alignment.center,
                       child: Column(mainAxisSize: MainAxisSize.min, children: [

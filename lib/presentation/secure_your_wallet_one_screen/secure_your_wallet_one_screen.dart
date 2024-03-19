@@ -6,6 +6,11 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:bitcoin/core/app_export.dart';
 
+import '../secret_recovery_phrase_one_screen/secret_recovery_phrase_one_screen.dart';
+import '../secret_recovery_phrase_screen/secret_recovery_phrase_screen.dart';
+import '../secret_recovery_phrase_three_dialog/secret_recovery_phrase_three_dialog.dart';
+import '../secret_recovery_phrase_two_screen/secret_recovery_phrase_two_screen.dart';
+
 class SecureYourWalletOneScreen extends StatelessWidget {
   const SecureYourWalletOneScreen({Key? key})
       : super(
@@ -28,12 +33,7 @@ class SecureYourWalletOneScreen extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: [
-                    CustomImageView(
-                      imagePath: ImageConstant.imgBackgroundLight,
-                      height: 461.v,
-                      width: 428.h,
-                      alignment: Alignment.bottomCenter,
-                    ),
+
                     Align(
                       alignment: Alignment.topCenter,
                       child: Padding(
@@ -151,6 +151,12 @@ class SecureYourWalletOneScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 43.v),
                             CustomElevatedButton(
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => SecretRecoveryPhraseTwoScreen()),
+                                );
+                              },
                               text: "Start",
                               buttonStyle: CustomButtonStyles.none,
                               decoration: CustomButtonStyles

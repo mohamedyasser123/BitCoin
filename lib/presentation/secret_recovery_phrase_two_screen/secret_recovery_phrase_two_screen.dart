@@ -6,6 +6,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:bitcoin/core/app_export.dart';
 
+import '../home_new_profile_up_tab_container_screen/home_new_profile_up_tab_container_screen.dart';
+
 class SecretRecoveryPhraseTwoScreen extends StatelessWidget {
   const SecretRecoveryPhraseTwoScreen({Key? key})
       : super(
@@ -28,12 +30,7 @@ class SecretRecoveryPhraseTwoScreen extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.topCenter,
                   children: [
-                    CustomImageView(
-                      imagePath: ImageConstant.imgBackgroundLight,
-                      height: 461.v,
-                      width: 428.h,
-                      alignment: Alignment.bottomCenter,
-                    ),
+
                     Align(
                       alignment: Alignment.topCenter,
                       child: Padding(
@@ -106,6 +103,12 @@ class SecretRecoveryPhraseTwoScreen extends StatelessWidget {
                             ),
                             SizedBox(height: 42.v),
                             CustomElevatedButton(
+                              onPressed: (){
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => HomeNewProfileUpTabContainerScreen()),
+                                );
+                              },
                               text: "Done",
                               buttonStyle: CustomButtonStyles.none,
                               decoration: CustomButtonStyles
